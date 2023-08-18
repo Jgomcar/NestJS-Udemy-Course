@@ -7,3 +7,7 @@ export const isValid: boolean = true;
 console.log(name, age)
 
 
+export const template = ` Esto es un string
+multilinea
+que puede inyectar valores
+${name}`
