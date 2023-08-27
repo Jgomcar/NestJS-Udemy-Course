@@ -731,6 +731,11 @@
     path-to-regexp "3.2.0"
     tslib "2.6.1"
 
+"@nestjs/mapped-types@*":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@nestjs/mapped-types/-/mapped-types-2.0.2.tgz#c8a090a8d22145b85ed977414c158534210f2e4f"
+  integrity sha512-V0izw6tWs6fTp9+KiiPUbGHWALy563Frn8X6Bm87ANLRuE46iuBMD5acKBDP5lKL/75QFvrzSJT7HkCbB0jTpg==
+
 "@nestjs/platform-express@^10.0.0":
   version "10.1.3"
   resolved "https://registry.yarnpkg.com/@nestjs/platform-express/-/platform-express-10.1.3.tgz#d1f644e86f2bc45c7529b9eed7669613f4392e99"
@@ -3558,6 +3563,11 @@ makeerror@1.0.12:
   integrity sha512-JmqCvUhmt43madlpFzG4BQzG2Z3m6tvQDNKdClZnO3VbIudJYmxsT0FNJMeiB2+JTSlTQTSbU8QdesVmwJcmLg==
   dependencies:
     tmpl "1.0.5"
+
+mapped-types@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/mapped-types/-/mapped-types-0.0.1.tgz#1dacf5ab1171efc5ce7d371ccffd7cfab35976a9"
+  integrity sha512-9WtZd+/WCFNmkLJh5LdEFQq4QJJ60E+H86Xus35D5DjyuD6O15F9OFOaGLkBJscJWh91WIzYv1OWZhrHslm3fg==
 
 media-typer@0.3.0:
   version "0.3.0"
