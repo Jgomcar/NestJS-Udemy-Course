@@ -74,7 +74,16 @@ npm i -g @nestjs/cli
 docker-compose up -d
 ```
 
-5. Reconstruir la base de datos con la semilla
+6. Clonar el archivo __.env.template__ y renombrar la copia a __.env__
+
+7. Llenar las variables definidas en el __.env__
+
+8. Para correr la aplicación en entorno de desarrollo
+```
+yarn start:dev
+```
+
+9. Reconstruir la base de datos con la semilla
 ```
 http://localhost:3000/api/v2/pokemon/seed
 ```
@@ -82,3 +91,23 @@ http://localhost:3000/api/v2/pokemon/seed
 ## Stack usado
 * MongoDB
 * Nest
+
+## Build de producción
+1. Crear el archivo __.en.prod__.
+2. Llenar las variables de entorno de producción.
+3. Crear la nueva imagen
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+3. Si la imagen ya está creada, se vuelve a levantar con:
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up -d
+```
+
+``` python
+     🚀
+    /|\
+   / | \
+  /  |  \
+ |🔥🔥🔥|
+```
