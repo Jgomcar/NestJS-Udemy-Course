@@ -1,8 +1,8 @@
 // representación de nuestro objeto en la base de datos
+import { BeforeInsert, BeforeUpdate, Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { ProductImage } from './product-image.entity';
 
-import { BeforeInsert, BeforeUpdate, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
-
-@Entity()
+@Entity({ name: 'products' })
 export class Product {
     @PrimaryGeneratedColumn('uuid')
     id: string;
@@ -49,6 +49,12 @@ export class Product {
     
     
     // images
+    @OneToMany(
+        () => ProductImage,
+        ( productImage ) => productImage.product,
+        { cascade: true, eager: true }
+    )
+    images?: ProductImage[];
 
     @BeforeInsert()
     checkSlugInsert(){
