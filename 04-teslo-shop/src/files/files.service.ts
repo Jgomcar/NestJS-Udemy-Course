@@ -6,8 +6,9 @@ import { join } from 'path';
 export class FilesService {
   
     getStaticProductImage( imageName: string ) {
-
-        const path = join( __dirname, '../../static/uploads', imageName);
+        // console.log('start getStaticProductImage');
+        const path = join( __dirname, '../../static/products', imageName);
+        // console.log(`path value: ${path}`)
         if ( !existsSync(path) ) throw new BadGatewayException(`No product found with image ${ imageName }`) ;
 
         return path
